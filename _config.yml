@@ -1,7 +1,48 @@
-theme: jekyll-theme-minimal
-
-title: Ji Home Page
-description: Ji language is an abstract symbolic programmig language
-logo: https://github.com/pages-themes/minimal/raw/master/thumbnail.png
-show_downloads: true
-google_analytics: XYZ
+---
+version: 3.8.4
+name: Ji Language
+description: Use Ji to write code like poetry, and prose like code
+url: https://writeji.org
+repository: https://github.com/jibase/jibase
+timezone: Israel/Tel Aviv
+twitter:
+  username: elisklar
+logo: "/img/ji-logo.png"
+google_analytics_id: XXUA-50000011-1
+google_site_verification: XXXXX
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+  posts:
+    permalink: "/news/:year/:month/:day/:title/"
+    output: true
+  tutorials:
+    output: true
+defaults:
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: news_item
+    image: "/img/twitter-card.png"
+plugins:
+- jekyll-avatar
+- jekyll-feed
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-seo-tag
+- jekyll-sitemap
+- jemoji
+sass:
+  style: compressed
+exclude:
+- ".gitignore"
+- CNAME
+- icomoon-selection.json
+- readme.md
