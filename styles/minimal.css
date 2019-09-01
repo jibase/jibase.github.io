@@ -37,8 +37,7 @@ li {
   display: inline;
 }
 
-li:first-child:after,
-li:nth-child(2):after {
+li:not(:last-child):after {
   content: "\005C";
   padding: 0 0.6rem;
   color: var(--prime);
